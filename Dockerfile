@@ -1,10 +1,12 @@
-FROM node:12
+FROM node:14
 
-COPY [".", "/usr/src/"]
+COPY ["package*.json", "/usr/src/app/"]
 
-WORKDIR /usr/src
+WORKDIR /usr/src/app
 
-RUN npm install
+RUN npm i
+
+COPY [".", "/usr/src/app"]
 
 EXPOSE 3000
 
