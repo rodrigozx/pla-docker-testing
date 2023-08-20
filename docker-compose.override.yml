@@ -1,0 +1,7 @@
+# este archivo puede estar en el ignore de git
+
+version: "3.8"
+
+services:
+  app:
+    build: .
